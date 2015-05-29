@@ -1,0 +1,51 @@
+<% if !user_signed_in? %>
+   <div class="jumbotron">
+   	<h1>Check out our UOB blog</h1>
+   	<p>Reviews, features, author interviews and book excerpts from the national daily and the Sunday book review. Registration required</p>
+   	<p><%= link_to "Sign Up to Write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+   </div>
+<% end %>
+
+
+<div class="row">
+   <% @books.each do |book| %>
+    <div class="col - sn-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag book.image.url(:medium), class: 'image'), book %>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
